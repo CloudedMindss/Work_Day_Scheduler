@@ -1,1 +1,4 @@
-dayjs('08-02-23').format('MM/DD/YYYY')
+
+  const localeSettings = {};
+  dayjs.locale(localeSettings);
+  $(function () {
