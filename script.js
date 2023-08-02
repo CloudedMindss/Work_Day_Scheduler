@@ -20,3 +20,15 @@
         localStorage.setItem(key, value);
       });
     }
+    function refreshColor() {
+      $('.time-block').each(function() {
+        const blockHour = parseInt(this.id);
+        if (blockHour == currentHour) {
+          $(this).removeClass('past future').addClass('present');
+        } else if (blockHour < currentHour) {
+          $(this).removeClass('future present').addClass('past');
+        } else {
+          $(this).removeClass('past present').addClass('future');
+        }
+      });
+    }
